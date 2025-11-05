@@ -1,21 +1,22 @@
-[tool.poetry]
-name = "reflection-agent"
+[project]
+name = "langgraph-course"
 version = "0.1.0"
-description = ""
-authors = ["Eden Marco <emarco177@gmail.com>"]
+description = "Add your description here"
 readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.14.2",
+    "langchain>=1.0.3",
+    "langchain-chroma>=1.0.0",
+    "langchain-community>=0.4.1",
+    "langchain-openai>=1.0.2",
+    "langchain-tavily>=0.2.13",
+    "langchainhub>=0.1.21",
+    "langgraph>=1.0.2",
+    "python-dotenv>=1.2.1",
+]
 
-[tool.poetry.dependencies]
-python = "^3.10"
-python-dotenv = "*"
-black = "*"
-isort = "*"
-langchain = "*"
-langchain-openai = "*"
-langgraph = "*"
-grandalf = "*"
-
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[dependency-groups]
+test = [
+    "pytest>=8.4.2",
+]
